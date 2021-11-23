@@ -23,7 +23,7 @@ node {
        // withCredentials([usernamePassword( credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 
         //  docker.withRegistry('', 'docker-hub-credentials') {
-               sh "docker login -u bhargav1997 -p Teja@1997"
+               sh "docker login -u bhargav1997 -p Teja@123"
                app.push("${env.BUILD_NUMBER}")
                app.push("latest")
 	
