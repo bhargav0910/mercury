@@ -1,5 +1,6 @@
 node {
     def app
+    def versioncd
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
