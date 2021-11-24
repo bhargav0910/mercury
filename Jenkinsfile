@@ -28,6 +28,7 @@ node {
            //    app.push("latest")
 
 	   echo "${env.BUILD_NUMBER}"
+	   echo "Hi"
 	
   }
 }
