@@ -23,9 +23,12 @@ node {
        // withCredentials([usernamePassword( credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 
         //  docker.withRegistry('localhost:5000', 'docker-hub-credentials') {
-               sh "docker login -u bhargav1997 -p Teja@123"
-               app.push("${env.BUILD_NUMBER}")
-               app.push("latest")
+       //       sh "docker login -u bhargav1997 -p Teja@123"
+         //      app.push("${env.BUILD_NUMBER}")
+           //    app.push("latest")
+
+	   versioncd = "${env.BUILD_NUMBER}"
+	   echo $versioncd
 	
   }
 }
