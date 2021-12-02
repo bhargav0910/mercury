@@ -32,10 +32,8 @@ node {
 	
   }
     stage('helm update'){
-      steps{
-        sh """
-          sed 's/^version: .*/version: '"2.2"'/' bhargav/Chart.yaml
-        """
-      }
+      sh """
+        sed 's/^version: .*/version: '"2.2"'/' bhargav/Chart.yaml
+      """
    }
 }
