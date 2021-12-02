@@ -16,7 +16,7 @@ node {
 
 
     // code placeholder
-    stage('Push image') {
+    stage('Print message') {
        /* Finally, we'll push the image with two tags:
         * First, the incremental build number from Jenkins
         * Second, the 'latest' tag. */
@@ -31,4 +31,11 @@ node {
 	   echo "Hi"
 	
   }
+    stage('helm update'){
+      steps{
+        sh """
+          sed 's/^version: .*/version: '"2.2"'/' bhargav/Chart.yaml
+        """
+      }
+   }
 }
