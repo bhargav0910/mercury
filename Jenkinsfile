@@ -34,6 +34,7 @@ node {
     stage('helm update'){
       sh """
         cd /tmp
+        rm -rf pyhton
         git clone https://github.com/bhargav0910/pyhton.git
       # sed -i 's/^version: .*/version: '"2.500"'/' /tmp/pyhton/bhargav/Chart.yaml
       """
