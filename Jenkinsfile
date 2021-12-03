@@ -32,7 +32,6 @@ node {
 	
   }
     stage('helm update'){
-      steps{
         container('build'){
           sh """
             cd /tmp
@@ -43,5 +42,4 @@ node {
          """
        }
      }
-   }
 }
