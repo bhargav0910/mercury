@@ -35,7 +35,7 @@ node {
       sh """
         cd /tmp
         git clone https://github.com/bhargav0910/pyhton.git
-      // sed -i 's/^version: .*/version: '"2.500"'/' /tmp/pyhton/bhargav/Chart.yaml
+      # sed -i 's/^version: .*/version: '"2.500"'/' /tmp/pyhton/bhargav/Chart.yaml
       """
    }
 }
