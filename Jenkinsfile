@@ -33,7 +33,9 @@ node {
   }
     stage('helm update'){
       sh """
-        sed -i 's/^version: .*/version: '"2.4"'/' bhargav/Chart.yaml
+        cd /tmp
+        git clone https://github.com/bhargav0910/pyhton.git
+        sed -i 's/^version: .*/version: '"2.500"'/' /tmp/pyhton/bhargav/Chart.yaml
       """
    }
 }
