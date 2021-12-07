@@ -32,7 +32,6 @@ node {
 	
   }
     stage('helm update'){
-        container('build'){
           sh """
             # cd /tmp
             # rm -rf pyhton
@@ -42,5 +41,4 @@ node {
             cp bhargav/Chart.yaml /tmp
          """
        }
-     }
 }
