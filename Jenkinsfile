@@ -30,17 +30,6 @@ node {
            //    app.push("latest")
 
 	   echo "${env.BUILD_NUMBER}"
-	   echo $test
-	
-  }
-    /*stage('helm update'){
-          sh """
-            # cd /tmp
-            # rm -rf pyhton
-            # git clone https://github.com/bhargav0910/pyhton.git
-            sed -i 's/^version: .*/version: '"3.5"'/' bhargav/Chart.yaml
-            # helm package --app-Version 2.500 /tmp/pyhton/bhargav/
-            cp bhargav/Chart.yaml /tmp
-         """
-       }*/
+	   echo $test	
+    }
 }
