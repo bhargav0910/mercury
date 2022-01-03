@@ -1,5 +1,6 @@
 node {
     def app
+    def test
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -12,6 +13,7 @@ node {
          * docker build on the command line */
 
         app = docker.build("getintodevops/hellonode")
+	test = "all tests passed"
     }
 
 
@@ -28,10 +30,10 @@ node {
            //    app.push("latest")
 
 	   echo "${env.BUILD_NUMBER}"
-	   echo "Hi"
+	   echo $test
 	
   }
-    stage('helm update'){
+    /*stage('helm update'){
           sh """
             # cd /tmp
             # rm -rf pyhton
@@ -40,5 +42,5 @@ node {
             # helm package --app-Version 2.500 /tmp/pyhton/bhargav/
             cp bhargav/Chart.yaml /tmp
          """
-       }
+       }*/
 }
