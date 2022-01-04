@@ -1,5 +1,5 @@
 node {
-    def a
+    def a=3
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
@@ -9,7 +9,6 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-	 a=3
 
     }
 
