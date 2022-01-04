@@ -1,4 +1,5 @@
 node {
+    def a
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
@@ -8,6 +9,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
+	 a=3
 
     }
 
@@ -15,5 +17,6 @@ node {
     // code placeholder
     stage('Print message') {
       echo "${env.BUILD_NUMBER}"
+      echo $a
     }
 }
