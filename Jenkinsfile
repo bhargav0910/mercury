@@ -1,3 +1,4 @@
+def my_var
 pipeline {
     agent any
     environment {
