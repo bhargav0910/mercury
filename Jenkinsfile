@@ -4,15 +4,14 @@ def VERSION
 pipeline {
 
   agent none
-
-  stages {
-    stage('Init Stage') {
-       VERSION = "3.2"
-    }
-	
-    stage('Print Stage'){
-      echo $VERSION
+  
+  stage('Init Stage') {
+    steps{
+      VERSION = "3.2"
     }
   }
+	
+  stage('Print Stage'){
+    echo $VERSION
+  }
 }
-
