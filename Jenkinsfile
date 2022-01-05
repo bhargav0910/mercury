@@ -23,4 +23,10 @@ pipeline {
             }
         }
     }
+
+    stage('test'){
+      sh """
+        echo "$my_var1"
+      """
+    }
 }
