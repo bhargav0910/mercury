@@ -12,7 +12,7 @@ pipeline {
 
 	stage('Print'){
 	  steps{
-            echo $VERSION
+            echo ${VERSION}
 	  }
 	}
     }
