@@ -1,19 +1,18 @@
+def  browser = 'Unknown'
+
 pipeline {
     agent any
-    environment {
-        VERSION = "3.2"
-    }
     stages {
-        stage('Build Container') {
+        stage('SNAPSHOT') {
             steps {
-              echo 'Building Container..'
+                echo "SNAPSHOT"
+                browser = "firefox"
+                }
             }
-	}
-
-	stage('Print'){
-	  steps{
-            echo ${VERSION}
-	  }
-	}
-    }
-}
+        stage('RELEASE') {
+             steps {
+                echo "${browser}"
+                }
+            }
+    }//end of stages 
+}//end of pipeline
