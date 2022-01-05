@@ -1,18 +1,22 @@
-def my_var
-pipeline {
-    agent any
-    stages {
-        stage('Example') {
-            steps {
-              my_var = 'value1'
-            }
-        }
+node {
+    def a
+    stage('Clone repository') {
+        /* Let's make sure we have the repository cloned to our workspace */
 
-        stage('Example2') {
-            steps {
-              printl(my_var)
-            }
-        }
+        checkout scm
+    }
 
+    stage('Build image') {
+        /* This builds the actual image; synonymous to
+         * docker build on the command line */
+	 a = 3
+
+    }
+
+
+    // code placeholder
+    stage('Print message') {
+      echo "${env.BUILD_NUMBER}"
+      echo "$(a)"
     }
 }
