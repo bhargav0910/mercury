@@ -17,6 +17,6 @@ node {
     // code placeholder
     stage('Print message') {
       echo "${env.BUILD_NUMBER}"
-      echo "$(a)"
+      echo "$a"
     }
 }
