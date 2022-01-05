@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+@Library('pipeline-toolbox') _
+
 def VERSION
 pipeline {
 
