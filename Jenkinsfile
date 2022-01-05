@@ -1,4 +1,3 @@
-def my_var
 pipeline {
     agent any
     environment {
@@ -8,8 +7,8 @@ pipeline {
         stage('Example') {
             steps {
                 script{
-                    my_var = 'value1'
-		    my_var1 = 'hello'
+                    def my_var = 'value1'
+		    def my_var1 = 'hello'
                 }
             }
         }
