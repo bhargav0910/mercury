@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         ENV_NAME = "${env.BRANCH_NAME}"
+	VERSION = "3.2"
     }
-    def VERSION
     stages {
         stage('Build Container') {
             steps {
