@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                my_var = 'value1'
+              my_var = 'value1'
             }
         }
 
         stage('Example2') {
             steps {
-                printl(my_var)
+              printl(my_var)
             }
         }
 
