@@ -16,7 +16,7 @@ pipeline {
         stage('Example2') {
             steps {
                 script{
-                    echo ${my_var} 
+                    sh 'echo {$my_var}'
                 }
             }
         }
