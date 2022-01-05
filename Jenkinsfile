@@ -9,6 +9,7 @@ pipeline {
             steps {
                 script{
                     my_var = 'value1'
+		    my_var1 = 'hello'
                 }
             }
         }
@@ -17,6 +18,7 @@ pipeline {
             steps {
                 sh """
 		  echo "$my_var"
+		  echo "$my_var1"
                 """
             }
         }
