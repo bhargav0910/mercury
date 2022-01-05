@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         ENV_NAME = "${env.BRANCH_NAME}"
-	VERSION = "3.2"
+        VERSION = "3.2"
     }
     stages {
         stage('Build Container') {
@@ -17,7 +17,9 @@ pipeline {
 	}
 
 	stage('Print'){
-          echo $VERSION
+	  steps{
+            echo $VERSION
+	  }
 	}
     }
 }
