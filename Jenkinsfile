@@ -1,4 +1,3 @@
-def my_var
 pipeline {
     agent any
     environment {
@@ -22,15 +21,5 @@ pipeline {
                 """
             }
         }
-    }
-
-    stages{
-      stage('test'){
-        steps{
-          sh """
-            echo "$my_var1"
-          """
-        } 
-      }
     }
 }
