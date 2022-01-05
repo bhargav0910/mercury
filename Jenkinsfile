@@ -24,11 +24,13 @@ pipeline {
         }
     }
 
-    stage('test'){
-      steps{
-        sh """
-          echo "$my_var1"
-        """
+    stages{
+      stage('test'){
+        steps{
+          sh """
+            echo "$my_var1"
+          """
+        } 
       }
     }
 }
