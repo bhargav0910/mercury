@@ -1,18 +1,24 @@
-def  browser = 'Unknown'
-
+def my_var
 pipeline {
     agent any
+    environment {
+        REVISION = ""
+    }
     stages {
-        stage('SNAPSHOT') {
+        stage('Example') {
             steps {
-                echo "SNAPSHOT"
-                browser = "firefox"
+                script{
+                    my_var = 'value1'
                 }
             }
-        stage('RELEASE') {
-             steps {
-                echo "${browser}"
+        }
+
+        stage('Example2') {
+            steps {
+                script{
+                    echo "$my_var" 
                 }
             }
-    }//end of stages 
-}//end of pipeline
+        }
+    }
+}
