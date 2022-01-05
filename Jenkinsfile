@@ -1,22 +1,18 @@
-node {
-    def a
-    stage('Clone repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
+#!/usr/bin/env groovy
 
-        checkout scm
+def VERSION
+pipeline {
+
+  agent none
+
+  stages {
+    stage('Init Stage') {
+       VERSION = "3.2"
     }
-
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-	 a = "This is a version test"
-
+	
+    stage('Print Stage'){
+      echo $VERSION
     }
-
-
-    // code placeholder
-    stage('Print message') {
-      echo "${env.BUILD_NUMBER}"
-      echo "$a"
-    }
+  }
 }
+
